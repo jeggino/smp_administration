@@ -54,7 +54,7 @@ days_Laatvlieger =  Laatvlieger_date[1] - Laatvlieger_date[0]
 days_Laatvlieger
 days_work_Laatvlieger = number_areas*Laatvlieger_days
 days_work_Laatvlieger
-days_off = days_Laatvlieger.day
+days_off = st.write(days_Laatvlieger)
 days_off
 days_off_percent = (days_off*100)/days_Laatvlieger
 st.write(f"If you cover {number_areas} areas during the laatvleger period you will work {days_work_Laatvlieger}, and your days off in that peroiund will be {days_off} which is the {days_off_percent} of the total")
