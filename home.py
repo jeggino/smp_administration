@@ -54,7 +54,11 @@ days_Laatvlieger =  (Laatvlieger_date[1] - Laatvlieger_date[0]).days
 days_work_Laatvlieger = number_areas*Laatvlieger_days
 days_off = days_Laatvlieger - days_work_Laatvlieger
 days_off_percent = round((days_off*100)/days_Laatvlieger)
-st.write(f"If you cover {number_areas} areas during the laatvleger period you will work {days_work_Laatvlieger} days, and {days_off} days off which is the {days_off_percent}% of the total number in that peroid")
+st.write(f"If you cover {number_areas} areas during the Laatvleger period you will work {days_work_Laatvlieger} days, and {days_off} days off which is the {days_off_percent}% of the total number in that peroid")
   
-  
+days_Kraamverblif =  (Kraamverblif_date[1] - Kraamverblif_date[0]).days
+days_work_Kraamverblif = number_areas*Kraamverblif_days
+days_off = days_Kraamverblif - days_work_Kraamverblif
+days_off_percent = round((days_off*100)/days_Kraamverblif)
+st.write(f"If you cover {number_areas} areas during the Kraamverblif period you will work {days_work_Kraamverblif} days, and {days_off} days off which is the {days_off_percent}% of the total number in that peroid")  
   
