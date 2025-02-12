@@ -50,8 +50,8 @@ number_areas = st.number_input("How many areas", min_value=0, max_value=None, va
                                    help=None, on_change=None, args=None, kwargs=None,
                                    placeholder=None, disabled=False, label_visibility="visible")
 
-Laatvlieger_date
-  
+days_Laatvlieger =  Laatvlieger_date[0] - Laatvlieger_date[1]
+st.write(days_Laatvlieger)
   
   
   
