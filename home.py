@@ -3,7 +3,7 @@ import datetime
 
 
 
-year = today.year
+year = datetime.datetime.now().year
 
 with st.expander('Laatvlieger'):
   Laatvlieger_date = st.date_input("Period", value=(datetime.date(year, 4, 15), datetime.date(year, 5, 15)), 
