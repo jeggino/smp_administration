@@ -53,8 +53,8 @@ number_areas = st.number_input("How many areas", min_value=0, max_value=None, va
 days_Laatvlieger =  Laatvlieger_date[1] - Laatvlieger_date[0]
 days_work_Laatvlieger = number_areas*Laatvlieger_days
 days_off = days_Laatvlieger-days_work_Laatvlieger
-days_off_% = (days_off*100)/days_Laatvlieger
-st.write(f"If you cover {number_areas} areas during the laatvleger period you will work {days_work_Laatvlieger}, and your days off in that peroiund will be {days_off} which is the {days_off_%} of the total")
+days_off_percent = (days_off*100)/days_Laatvlieger
+st.write(f"If you cover {number_areas} areas during the laatvleger period you will work {days_work_Laatvlieger}, and your days off in that peroiund will be {days_off} which is the {days_off_percent} of the total")
   
   
   
