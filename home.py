@@ -30,7 +30,7 @@ with st.expander('Winterverblijf'):
                                      placeholder=None, disabled=False, label_visibility="visible")
 
 with st.expander('Paarverblijf'):
-  Paarverblijf_date = st.date_input("Period", value=(datetime.date(year, 4, 15), datetime.date(year, 5, 15)), 
+  Paarverblijf_date = st.date_input("Period", value=(datetime.date(year, 9, 1), datetime.date(year, 10, 1)), 
                                    min_value=None, max_value=None, key=None, help=None, on_change=None, args=None, 
                                    kwargs=None,format="DD/MM/YYYY", disabled=False, label_visibility="visible")
   Paarverblijf_days = st.number_input("How many days", min_value=0, max_value=2, value=2, step=1, format=None, key=None, 
@@ -38,7 +38,7 @@ with st.expander('Paarverblijf'):
                                      placeholder=None, disabled=False, label_visibility="visible")
 
 with st.expander('Tweekleirige'):
-  Tweekleirige_date = st.date_input("Period", value=(datetime.date(year, 4, 15), datetime.date(year, 5, 15)), 
+  Tweekleirige_date = st.date_input("Period", value=(datetime.date(year, 10, 1), datetime.date(year, 11, 1)), 
                                    min_value=None, max_value=None, key=None, help=None, on_change=None, args=None, 
                                    kwargs=None,format="DD/MM/YYYY", disabled=False, label_visibility="visible")
   Tweekleirige_days = st.number_input("How many days", min_value=0, max_value=2, value=2, step=1, format=None, key=None, 
