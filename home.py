@@ -61,7 +61,7 @@ with st.expander('Tweekleirige'):
                                    placeholder=None, disabled=False, label_visibility="visible")
 @st.dialog(" ")
 def calculate():
-  if days_work_Laatvlieger >0:
+  if days_work_Laatvlieger > 0:
     days_Laatvlieger =  (Laatvlieger_date[1] - Laatvlieger_date[0]).days
     days_work_Laatvlieger = 2*number_areas_Laatvlieger
     days_off = days_Laatvlieger - days_work_Laatvlieger
