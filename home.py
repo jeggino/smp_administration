@@ -59,7 +59,7 @@ with st.expander('Tweekleirige'):
   number_areas_Tweekleirige = st.number_input("How many areas", min_value=0, max_value=None, value="min", step=1, format=None, key="number_areas_Tweekleirige", 
                                    help=None, on_change=None, args=None, kwargs=None,
                                    placeholder=None, disabled=False, label_visibility="visible")
-@st.dialog("")
+@st.dialog(" ")
 def calculate():
 
   days_Laatvlieger =  (Laatvlieger_date[1] - Laatvlieger_date[0]).days
