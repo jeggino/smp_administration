@@ -108,7 +108,7 @@ def calculate():
   
   total_days = days_work_Laatvlieger + days_work_Kraamverblif_single + days_work_Winterverblijf + days_work_Paarverblijf
   payment = total_days * 200 
-  st.write(f"You will work in total {total_days} bat rounds, earning {payment} euros")
+  st.write(f"You will work in total {total_days} bat rounds, earning {payment} euros considering 200 euros per round")
       
 
 if st.button("Calculate"):
