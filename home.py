@@ -49,7 +49,7 @@ with st.expander('Paarverblijf'):
                                    help=None, on_change=None, args=None, kwargs=None,
                                    placeholder=None, disabled=False, label_visibility="visible")
 
-with st.expander('Tweekleirige'):
+with st.expander('Tweekleurige'):
   Tweekleirige_date = st.date_input("Period", value=(datetime.date(year, 10, 1), datetime.date(year, 11, 1)), 
                                    min_value=None, max_value=None, key="Tweekleirige_date", help=None, on_change=None, args=None, 
                                    kwargs=None,format="DD/MM/YYYY", disabled=False, label_visibility="visible")
@@ -91,9 +91,9 @@ def calculate():
     {days_work_Kraamverblif_single} days single, and {days_off_single} days off which is the {days_off_percent_single}% of the total number in that period
     , corrispondig to almost {days_off_week_single} days off per week""")  
   else:
-    days_work_Kraamverblif = 0
+    days_work_Kraamverblif_single = 0
     
-  if number_areas_Kraamverblif > 0:
+  if number_areas_Winterverblijf > 0:
     days_Winterverblijf =  (Winterverblijf_date[1] - Winterverblijf_date[0]).days
     days_work_Winterverblijf = 2*number_areas_Winterverblijf
     days_off = days_Winterverblijf - days_work_Winterverblijf
@@ -102,9 +102,9 @@ def calculate():
     st.write(f"""If you cover {number_areas_Winterverblijf} areas during the Winterverblijf period you will work {days_work_Winterverblijf} days, 
     and {days_off} days off which is the {days_off_percent}% of the total number in that peroid, corrispondig to almost {days_off_week} days off per week""")
   else:
-    days_work_Kraamverblif = 0
+    days_work_Winterverblijf = 0
     
-  if number_areas_Kraamverblif > 0:
+  if number_areas_Paarverblijf > 0:
     days_Paarverblijf =  (Paarverblijf_date[1] - Paarverblijf_date[0]).days
     days_work_Paarverblijf = 2*number_areas_Paarverblijf
     days_off = days_Paarverblijf - days_work_Paarverblijf
@@ -113,9 +113,9 @@ def calculate():
     st.write(f"""If you cover {number_areas_Paarverblijf} areas during the Paarverblijf period you will work {days_work_Paarverblijf} days, 
     and {days_off} days off which is the {days_off_percent}% of the total number in that peroid, corrispondig to almost {days_off_week} days off per week""")
   else:
-    days_work_Kraamverblif = 0
+    days_work_Paarverblijf = 0
     
-  if number_areas_Kraamverblif > 0:
+  if number_areas_Tweekleirige > 0:
     days_Tweekleirige =  (Tweekleirige_date[1] - Tweekleirige_date[0]).days
     days_work_Tweekleirige = 2*number_areas_Tweekleirige
     days_off = days_Paarverblijf - days_work_Tweekleirige
@@ -124,7 +124,7 @@ def calculate():
     st.write(f"""If you cover {number_areas_Tweekleirige} areas during the Tweekleurige vlermuis period you will work {days_work_Tweekleirige} days, 
     and {days_off} days off which is the {days_off_percent}% of the total number in that peroid, corrispondig to almost {days_off_week} days off per week""")
   else:
-    days_work_Kraamverblif = 0  
+    days_work_Tweekleirige = 0  
     
   total_days = days_work_Laatvlieger + days_work_Kraamverblif_single + days_work_Winterverblijf + days_work_Paarverblijf + days_work_Tweekleirige
   payment = total_days * 200 
