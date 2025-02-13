@@ -60,52 +60,54 @@ with st.expander('Tweekleirige'):
                                    help=None, on_change=None, args=None, kwargs=None,
                                    placeholder=None, disabled=False, label_visibility="visible")
 
-
-
-days_Laatvlieger =  (Laatvlieger_date[1] - Laatvlieger_date[0]).days
-days_work_Laatvlieger = 2*number_areas_Laatvlieger
-days_off = days_Laatvlieger - days_work_Laatvlieger
-days_off_percent = round((days_off*100)/days_Laatvlieger)
-days_off_week = round((days_off_percent/100)*7,1)
-st.write(f"""If you cover {number_areas_Laatvlieger} areas during the Laatvleger period you will work {days_work_Laatvlieger} days, 
-and {days_off} days off which is the {days_off_percent}% of the total number in that peroid, corrispondig to almost {days_off_week} days off per week""")
-
-
-days_Kraamverblif =  (Kraamverblif_date[1] - Kraamverblif_date[0]).days
-
-days_work_Kraamverblif_continued = 2*number_areas_Kraamverblif
-days_off_continued = days_Kraamverblif - days_work_Kraamverblif_continued
-days_off_percent_continued = round((days_off_continued*100)/days_Kraamverblif)
-days_off_week_continued = round((days_off_percent_continued/100)*7,1)
-st.write(f"""If you cover {number_areas_Kraamverblif} areas during the Kraamverblif period you will work 
-{days_work_Kraamverblif_continued} days continued, and {days_off_continued} days off which is the {days_off_continued}% of the total number in that period
-, corrispondig to almost {days_off_week_continued} days off per week""")  
-
-days_work_Kraamverblif_single = 3*number_areas_Kraamverblif
-days_off_single = days_Kraamverblif - days_work_Kraamverblif_single
-days_off_percent_single = round((days_off_single*100)/days_Kraamverblif)
-days_off_week_single = round((days_off_percent_single/100)*7,1)
-st.write(f"""If you cover {number_areas_Kraamverblif} areas during the Kraamverblif period you will work 
-{days_work_Kraamverblif_single} days single, and {days_off_single} days off which is the {days_off_percent_single}% of the total number in that period
-, corrispondig to almost {days_off_week_single} days off per week""")  
-
-days_Winterverblijf =  (Winterverblijf_date[1] - Winterverblijf_date[0]).days
-days_work_Winterverblijf = 2*number_areas_Winterverblijf
-days_off = days_Winterverblijf - days_work_Winterverblijf
-days_off_percent = round((days_off*100)/days_Winterverblijf)
-days_off_week = round((days_off_percent/100)*7,1)
-st.write(f"""If you cover {number_areas_Winterverblijf} areas during the Winterverblijf period you will work {days_work_Winterverblijf} days, 
-and {days_off} days off which is the {days_off_percent}% of the total number in that peroid, corrispondig to almost {days_off_week} days off per week""")
-
-days_Paarverblijf =  (Paarverblijf_date[1] - Paarverblijf_date[0]).days
-days_work_Paarverblijf = 2*number_areas_Paarverblijf
-days_off = days_Paarverblijf - days_work_Paarverblijf
-days_off_percent = round((days_off*100)/days_Paarverblijf)
-days_off_week = round((days_off_percent/100)*7,1)
-st.write(f"""If you cover {number_areas_Paarverblijf} areas during the Paarverblijf period you will work {days_work_Paarverblijf} days, 
-and {days_off} days off which is the {days_off_percent}% of the total number in that peroid, corrispondig to almost {days_off_week} days off per week""")
-
-total_days = days_work_Laatvlieger + days_work_Kraamverblif_single + days_work_Winterverblijf + days_work_Paarverblijf
-payment = total_days * 200 
-st.write(f"You will work in total {total_days} bat rounds, earning {payment} euros")
+if st.button():
+  @st.dialog("Cast your vote")
+  def calculate(item):
   
+    days_Laatvlieger =  (Laatvlieger_date[1] - Laatvlieger_date[0]).days
+    days_work_Laatvlieger = 2*number_areas_Laatvlieger
+    days_off = days_Laatvlieger - days_work_Laatvlieger
+    days_off_percent = round((days_off*100)/days_Laatvlieger)
+    days_off_week = round((days_off_percent/100)*7,1)
+    st.write(f"""If you cover {number_areas_Laatvlieger} areas during the Laatvleger period you will work {days_work_Laatvlieger} days, 
+    and {days_off} days off which is the {days_off_percent}% of the total number in that peroid, corrispondig to almost {days_off_week} days off per week""")
+    
+    
+    days_Kraamverblif =  (Kraamverblif_date[1] - Kraamverblif_date[0]).days
+    
+    days_work_Kraamverblif_continued = 2*number_areas_Kraamverblif
+    days_off_continued = days_Kraamverblif - days_work_Kraamverblif_continued
+    days_off_percent_continued = round((days_off_continued*100)/days_Kraamverblif)
+    days_off_week_continued = round((days_off_percent_continued/100)*7,1)
+    st.write(f"""If you cover {number_areas_Kraamverblif} areas during the Kraamverblif period you will work 
+    {days_work_Kraamverblif_continued} days continued, and {days_off_continued} days off which is the {days_off_continued}% of the total number in that period
+    , corrispondig to almost {days_off_week_continued} days off per week""")  
+    
+    days_work_Kraamverblif_single = 3*number_areas_Kraamverblif
+    days_off_single = days_Kraamverblif - days_work_Kraamverblif_single
+    days_off_percent_single = round((days_off_single*100)/days_Kraamverblif)
+    days_off_week_single = round((days_off_percent_single/100)*7,1)
+    st.write(f"""If you cover {number_areas_Kraamverblif} areas during the Kraamverblif period you will work 
+    {days_work_Kraamverblif_single} days single, and {days_off_single} days off which is the {days_off_percent_single}% of the total number in that period
+    , corrispondig to almost {days_off_week_single} days off per week""")  
+    
+    days_Winterverblijf =  (Winterverblijf_date[1] - Winterverblijf_date[0]).days
+    days_work_Winterverblijf = 2*number_areas_Winterverblijf
+    days_off = days_Winterverblijf - days_work_Winterverblijf
+    days_off_percent = round((days_off*100)/days_Winterverblijf)
+    days_off_week = round((days_off_percent/100)*7,1)
+    st.write(f"""If you cover {number_areas_Winterverblijf} areas during the Winterverblijf period you will work {days_work_Winterverblijf} days, 
+    and {days_off} days off which is the {days_off_percent}% of the total number in that peroid, corrispondig to almost {days_off_week} days off per week""")
+    
+    days_Paarverblijf =  (Paarverblijf_date[1] - Paarverblijf_date[0]).days
+    days_work_Paarverblijf = 2*number_areas_Paarverblijf
+    days_off = days_Paarverblijf - days_work_Paarverblijf
+    days_off_percent = round((days_off*100)/days_Paarverblijf)
+    days_off_week = round((days_off_percent/100)*7,1)
+    st.write(f"""If you cover {number_areas_Paarverblijf} areas during the Paarverblijf period you will work {days_work_Paarverblijf} days, 
+    and {days_off} days off which is the {days_off_percent}% of the total number in that peroid, corrispondig to almost {days_off_week} days off per week""")
+    
+    total_days = days_work_Laatvlieger + days_work_Kraamverblif_single + days_work_Winterverblijf + days_work_Paarverblijf
+    payment = total_days * 200 
+    st.write(f"You will work in total {total_days} bat rounds, earning {payment} euros")
+      
