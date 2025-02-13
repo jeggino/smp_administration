@@ -105,8 +105,16 @@ def calculate():
   days_off_week = round((days_off_percent/100)*7,1)
   st.write(f"""If you cover {number_areas_Paarverblijf} areas during the Paarverblijf period you will work {days_work_Paarverblijf} days, 
   and {days_off} days off which is the {days_off_percent}% of the total number in that peroid, corrispondig to almost {days_off_week} days off per week""")
+
+  days_Tweekleirige =  (Tweekleirige_date[1] - Tweekleirige_date[0]).days
+  days_work_Tweekleirige = 2*number_areas_Tweekleirige
+  days_off = days_Paarverblijf - days_work_Tweekleirige
+  days_off_percent = round((days_off*100)/days_Tweekleirige)
+  days_off_week = round((days_off_percent/100)*7,1)
+  st.write(f"""If you cover {number_areas_Tweekleirige} areas during the Tweekleurige vlermuis period you will work {days_work_Tweekleirige} days, 
+  and {days_off} days off which is the {days_off_percent}% of the total number in that peroid, corrispondig to almost {days_off_week} days off per week""")
   
-  total_days = days_work_Laatvlieger + days_work_Kraamverblif_single + days_work_Winterverblijf + days_work_Paarverblijf
+  total_days = days_work_Laatvlieger + days_work_Kraamverblif_single + days_work_Winterverblijf + days_work_Paarverblijf + days_work_Tweekleirige
   payment = total_days * 200 
   st.write(f"You will work in total {total_days} bat rounds, earning {payment} euros considering 200 euros per round")
       
