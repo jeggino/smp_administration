@@ -59,10 +59,8 @@ with st.expander('Tweekleirige'):
   number_areas_Tweekleirige = st.number_input("How many areas", min_value=0, max_value=None, value="min", step=1, format=None, key="number_areas_Tweekleirige", 
                                    help=None, on_change=None, args=None, kwargs=None,
                                    placeholder=None, disabled=False, label_visibility="visible")
-
-if st.button():
-  @st.dialog("Cast your vote")
-  def calculate(item):
+ @st.dialog("")
+  def calculate():
   
     days_Laatvlieger =  (Laatvlieger_date[1] - Laatvlieger_date[0]).days
     days_work_Laatvlieger = 2*number_areas_Laatvlieger
@@ -111,3 +109,7 @@ if st.button():
     payment = total_days * 200 
     st.write(f"You will work in total {total_days} bat rounds, earning {payment} euros")
       
+
+if st.button("Calculate"):
+  calculate()
+ 
