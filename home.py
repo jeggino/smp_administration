@@ -76,7 +76,7 @@ days_Kraamverblif =  (Kraamverblif_date[1] - Kraamverblif_date[0]).days
 days_work_Kraamverblif_continued = 2*number_areas_Kraamverblif
 days_off_continued = days_Kraamverblif - days_work_Kraamverblif_continued
 days_off_percent_continued = round((days_off_continued*100)/days_Kraamverblif)
-days_off_week_continued = round((days_off_percent/100)*7,1)
+days_off_week_continued = round((days_off_percent_continued/100)*7,1)
 st.write(f"""If you cover {number_areas_Kraamverblif} areas during the Kraamverblif period you will work 
 {days_work_Kraamverblif_continued} days continued, and {days_off_continued} days off which is the {days_off_continued}% of the total number in that period
 , corrispondig to almost {days_off_week_continued} days off per week""")  
@@ -84,7 +84,7 @@ st.write(f"""If you cover {number_areas_Kraamverblif} areas during the Kraamverb
 days_work_Kraamverblif_single = 3*number_areas_Kraamverblif
 days_off_single = days_Kraamverblif - days_work_Kraamverblif_single
 days_off_percent_single = round((days_off_single*100)/days_Kraamverblif)
-days_off_week_single = round((days_off_percent/100)*7,1)
+days_off_week_single = round((days_off_percent_single/100)*7,1)
 st.write(f"""If you cover {number_areas_Kraamverblif} areas during the Kraamverblif period you will work 
 {days_work_Kraamverblif_single} days single, and {days_off_single} days off which is the {days_off_percent_single}% of the total number in that period
 , corrispondig to almost {days_off_week_single} days off per week""")  
