@@ -49,7 +49,7 @@ with st.expander('Paarverblijf'):
                                    help=None, on_change=None, args=None, kwargs=None,
                                    placeholder=None, disabled=False, label_visibility="visible")
 
-with st.expander('Tweekleurige'):
+with st.expander('Tweekleurige periode'):
   Tweekleirige_date = st.date_input("Period", value=(datetime.date(year, 10, 1), datetime.date(year, 11, 1)), 
                                    min_value=None, max_value=None, key="Tweekleirige_date", help=None, on_change=None, args=None, 
                                    kwargs=None,format="DD/MM/YYYY", disabled=False, label_visibility="visible")
