@@ -78,6 +78,6 @@ st.write(f"""If you cover {number_areas_Kraamverblif} areas during the Kraamverb
 days_work_Kraamverblif_single = 3*Kraamverblif_days
 days_off_single = days_Kraamverblif - days_work_Kraamverblif_single
 days_off_percent_single = round((days_off_single*100)/days_work_Kraamverblif_single)
-st.write(f"If you cover {number_areas_Kraamverblif} areas during the Kraamverblif period you will work 
-{days_work_Kraamverblif_single} days, and {days_off_single} days off which is the {days_off_percent_single}% of the total number in that peroid")  
+st.write(f"""If you cover {number_areas_Kraamverblif} areas during the Kraamverblif period you will work 
+{days_work_Kraamverblif_single} days, and {days_off_single} days off which is the {days_off_percent_single}% of the total number in that peroid""")  
   
