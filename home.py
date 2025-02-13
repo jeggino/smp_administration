@@ -107,5 +107,5 @@ and {days_off} days off which is the {days_off_percent}% of the total number in 
 
 total_days = days_work_Laatvlieger + days_work_Kraamverblif_single + days_work_Winterverblijf + days_work_Paarverblijf
 payment = total_days * 200 
-st.write(f"You will work in total {total_days} days, earning {payment} euros")
+st.write(f"You will work in total {total_days} bat rounds, earning {payment} euros")
   
