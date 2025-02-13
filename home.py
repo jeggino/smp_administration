@@ -63,19 +63,20 @@ with st.expander('Tweekleirige'):
 
 
 days_Laatvlieger =  (Laatvlieger_date[1] - Laatvlieger_date[0]).days
-days_work_Laatvlieger = 2*days_Laatvlieger
+days_work_Laatvlieger = 2*number_areas_Laatvlieger
 days_off = days_Laatvlieger - days_work_Laatvlieger
 days_off_percent = round((days_off*100)/days_Laatvlieger)
 st.write(f"If you cover {number_areas_Laatvlieger} areas during the Laatvleger period you will work {days_work_Laatvlieger} days, and {days_off} days off which is the {days_off_percent}% of the total number in that peroid")
   
 days_Kraamverblif =  (Kraamverblif_date[1] - Kraamverblif_date[0]).days
-days_work_Kraamverblif_continued = 2*days_Kraamverblif
+
+days_work_Kraamverblif_continued = 2*number_areas_Kraamverblif
 days_off_continued = days_Kraamverblif - days_work_Kraamverblif_continued
 days_off_percent_continued = round((days_off_continued*100)/days_work_Kraamverblif_continued)
 st.write(f"""If you cover {number_areas_Kraamverblif} areas during the Kraamverblif period you will work 
 {days_work_Kraamverblif_continued} days, and {days_off_continued} days off which is the {days_off_continued}% of the total number in that peroid""")  
 
-days_work_Kraamverblif_single = 3*days_Kraamverblif
+days_work_Kraamverblif_single = 3*number_areas_Kraamverblif
 days_off_single = days_Kraamverblif - days_work_Kraamverblif_single
 days_off_percent_single = round((days_off_single*100)/days_work_Kraamverblif_single)
 st.write(f"""If you cover {number_areas_Kraamverblif} areas during the Kraamverblif period you will work 
