@@ -105,5 +105,7 @@ days_off_week = round((days_off_percent/100)*7,1)
 st.write(f"""If you cover {number_areas_Paarverblijf} areas during the Paarverblijf period you will work {days_work_Paarverblijf} days, 
 and {days_off} days off which is the {days_off_percent}% of the total number in that peroid, corrispondig to almost {days_off_week} days off per week""")
 
-
+total_days = days_work_Laatvlieger + days_work_Kraamverblif_single + days_work_Winterverblijf + days_work_Paarverblijf
+payment = total_days * 200 
+st.write(f"You will work in total {payment} days, earning {payment} euros")
   
